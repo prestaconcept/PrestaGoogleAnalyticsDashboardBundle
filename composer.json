@@ -1,0 +1,30 @@
+{
+    "name": "presta/google-analytics-dashboard-bundle",
+    "type": "symfony-bundle",
+    "description": "PrestaGoogleAnalyticsDashboardBundle adds a google analytics dashboard to your Sonata administration",
+    "keywords": ["symfony2", "bundle", "google", "analytics", "prestaconcept"],
+    "homepage": "https://github.com/prestaconcept/PrestaGoogleAnalyticsDashboardBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Bastien",
+            "email": "nbastien@prestaconcept.net",
+            "homepage": "http://www.prestaconcept.net/"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+
+        "symfony/framework-bundle": "~2.2"
+    },
+    "autoload": {
+        "psr-0": { "Presta\\GoogleAnalyticsDashboardBundle": "" }
+    },
+    "target-dir": "Presta/GoogleAnalyticsDashboardBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
