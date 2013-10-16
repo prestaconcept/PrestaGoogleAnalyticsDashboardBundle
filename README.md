@@ -59,3 +59,7 @@ Released under the MIT License
 [1]: http://www.h-o.nl/blog/free_magento_module_google_analytics_dashboard
 [3]: https://groups.google.com/forum/?hl=fr&fromgroups#!forum/prestacms-devs
 [4]: http://prestaconcept.github.io/presta-google-analytics-dashboard/
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/prestaconcept/prestagoogleanalyticsdashboardbundle/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
