@@ -16,13 +16,17 @@
 {% block content %}
 <table class="table table-bordered sonata-ba-list">
     <thead>
-        <tr><th colspan="4">{{ 'title.today' | trans }}</th></tr>
+        <tr><th colspan="6">{{ 'title.today' | trans }}</th></tr>
     </thead>
     <tbody>
         <tr>
             <td class="center">
                 <div>{{ today_visit }}</div>
                 <strong>{{ 'label.visit' | trans }}</strong>
+            </td>
+            <td class="center">
+                <div>{{ today_new_visit }}</div>
+                <strong>{{ 'label.new_visit' | trans }}</strong>
             </td>
             <td class="center">
                 <div>{{ today_page_view }}</div>
@@ -36,19 +40,27 @@
                 <div>{{ today_avg_time_on_site }}</div>
                 <strong>{{ 'label.avg_time_on_site' | trans }}</strong>
             </td>
+            <td class="center">
+                <div>{{ today_visit_bounce_rate }} %</div>
+                <strong>{{ 'label.visit_bounce_rate' | trans }}</strong>
+            </td>
         </tr>
     </tbody>
 </table>
 
 <table class="table table-bordered sonata-ba-list">
     <thead>
-        <tr><th colspan="4">{{ 'title.yesterday' | trans }}</th></tr>
+        <tr><th colspan="6">{{ 'title.yesterday' | trans }}</th></tr>
     </thead>
     <tbody>
         <tr>
             <td class="center">
                 <div>{{ yesterday_visit }}</div>
                 <strong>{{ 'label.visit' | trans }}</strong>
+            </td>
+            <td class="center">
+                <div>{{ yesterday_new_visit }}</div>
+                <strong>{{ 'label.new_visit' | trans }}</strong>
             </td>
             <td class="center">
                 <div>{{ yesterday_page_view }}</div>
@@ -61,6 +73,10 @@
             <td class="center">
                 <div>{{ yesterday_avg_time_on_site }}</div>
                 <strong>{{ 'label.avg_time_on_site' | trans }}</strong>
+            </td>
+            <td class="center">
+                <div>{{ yesterday_visit_bounce_rate }} %</div>
+                <strong>{{ 'label.visit_bounce_rate' | trans }}</strong>
             </td>
         </tr>
     </tbody>

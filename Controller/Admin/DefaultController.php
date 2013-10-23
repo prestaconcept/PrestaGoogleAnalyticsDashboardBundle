@@ -25,15 +25,25 @@ class DefaultController extends AdminController
      */
     public function indexAction()
     {
+        $manager    = $this->get('presta_google_analytics_dashboard.manager.google_analytics');
+        $today      = $manager->getToday();
+        $yesterday  = $manager->getYesterday();
+
         $viewParams = array(
-            'today_visit' => 'todo',
-            'today_page_view' => 'todo',
-            'today_page_per_visit' => 'todo',
-            'today_avg_time_on_site' => 'todo',
-            'yesterday_visit' => 'todo',
-            'yesterday_page_view' => 'todo',
-            'yesterday_page_per_visit' => 'todo',
-            'yesterday_avg_time_on_site' => 'todo',
+            'today_visit' => $today->getVisits(),
+            'today_page_view' => $today->getPageViews(),
+            'today_page_per_visit' => $today->getPageViewsPerVisit(),
+            'today_avg_time_on_site' => $today->getAvgTimeOnSite(),
+            'today_visit_bounce_rate' => $today->getVisitBounceRate(),
+            'today_new_visit' => $today->getNewVisits(),
+
+            'yesterday_visit' => $yesterday->getVisits(),
+            'yesterday_page_view' => $yesterday->getPageViews(),
+            'yesterday_page_per_visit' => $yesterday->getPageViewsPerVisit(),
+            'yesterday_avg_time_on_site' => $yesterday->getAvgTimeOnSite(),
+            'yesterday_visit_bounce_rate' => $yesterday->getVisitBounceRate(),
+            'yesterday_new_visit' => $yesterday->getNewVisits(),
+
         );
 
         return $this->renderResponse('PrestaGoogleAnalyticsDashboardBundle:Admin/Default:index.html.twig', $viewParams);

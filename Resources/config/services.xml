@@ -7,6 +7,10 @@
 
     <parameters>
         <parameter key="presta_google_analytics_dashboard.block.dashboard.class">Presta\GoogleAnalyticsDashboardBundle\Block\DashboardBlockService</parameter>
+        <parameter key="presta_google_analytics_dashboard.manager.google_analytics.class">Presta\GoogleAnalyticsDashboardBundle\Model\GoogleAnalyticsManager</parameter>
+        <parameter key="presta_google_analytics_dashboard.client_id" >XXXXXXXXXXXX@developer.gserviceaccount.com</parameter>
+        <parameter key="presta_google_analytics_dashboard.profile_id" >ga:XXXXXXXX</parameter>
+        <parameter key="presta_google_analytics_dashboard.private_key_file">"%kernel.root_dir%/Resources/bin/myPrivateKey.p12"</parameter>
     </parameters>
 
     <services>
@@ -15,6 +19,18 @@
             <argument>presta_google_analytics_dashboard.block.dashboard</argument>
             <argument type="service" id="templating" />
             <argument type="service" id="sonata.admin.pool" />
+        </service>
+
+        <service id="presta_google_analytics_dashboard.manager.google_analytics" class="%presta_google_analytics_dashboard.manager.google_analytics.class%">
+            <call method="setProfileId">
+                <argument>%presta_google_analytics_dashboard.profile_id%</argument>
+            </call>
+            <call method="setClientId">
+                <argument>%presta_google_analytics_dashboard.client_id%</argument>
+            </call>
+            <call method="setPrivateKeyFile">
+                <argument>%presta_google_analytics_dashboard.private_key_file%</argument>
+            </call>
         </service>
     </services>
 

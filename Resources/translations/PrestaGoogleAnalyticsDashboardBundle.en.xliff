@@ -26,6 +26,10 @@
                 <source>label.visit</source>
                 <target>Visits</target>
             </trans-unit>
+            <trans-unit id="label.new_visit">
+                <source>label.new_visit</source>
+                <target>New visits</target>
+            </trans-unit>
             <trans-unit id="label.page_view">
                 <source>label.page_view</source>
                 <target>Page views</target>
@@ -37,6 +41,10 @@
             <trans-unit id="label.avg_time_on_site">
                 <source>label.avg_time_on_site</source>
                 <target>Avg. time on site</target>
+            </trans-unit>
+            <trans-unit id="label.visit_bounce_rate">
+                <source>label.visit_bounce_rate</source>
+                <target>Bounce Rate</target>
             </trans-unit>
         </body>
     </file>
