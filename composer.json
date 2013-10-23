@@ -16,7 +16,9 @@
     "require": {
         "php": ">=5.3.3",
 
-        "symfony/framework-bundle": "~2.2"
+        "symfony/framework-bundle": "~2.2",
+        "widop/google-analytics": "1.0.*",
+        "widop/http-adapter-bundle": "1.*"
     },
     "autoload": {
         "psr-0": { "Presta\\GoogleAnalyticsDashboardBundle": "" }
