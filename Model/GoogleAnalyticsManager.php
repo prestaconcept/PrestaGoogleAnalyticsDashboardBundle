@@ -21,6 +21,9 @@ use Widop\HttpAdapter\CurlHttpAdapter;
  */
 class GoogleAnalyticsManager
 {
+    //used to determine if configuration is set or not
+    const DUMMY_PROFILE_ID = 'ga:YOUR_PROFIL_ID';
+
     /**
      * @var string
      */
@@ -104,6 +107,16 @@ class GoogleAnalyticsManager
             'ga:avgTimeOnSite',
             'ga:visitBounceRate'
         );
+    }
+
+    /**
+     * Check if configuration is set or if we are in fake mode
+     *
+     * @return bool
+     */
+    public function isDummy()
+    {
+        return ($this->profileId == self::DUMMY_PROFILE_ID);
     }
 
     /**

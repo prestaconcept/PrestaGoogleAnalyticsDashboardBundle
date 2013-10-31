@@ -46,6 +46,14 @@
                 <source>label.visit_bounce_rate</source>
                 <target>Bounce Rate</target>
             </trans-unit>
+            <trans-unit id="alert.dummy_configuration">
+                <source>alert.dummy_configuration</source>
+                <target>WARNING : Google analytics is not configure. This data are just fake made for unit testing.</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.dashboard">
+                <source>breadcrumb.dashboard</source>
+                <target>Google Analytics Dashboard</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

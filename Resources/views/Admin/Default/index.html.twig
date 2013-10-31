@@ -7,13 +7,20 @@
 
 {% block breadcrumb %}
     <li><a href="{{ url('sonata_admin_dashboard') }}">{{ 'breadcrumb.link_dashboard'|trans({}, 'SonataAdminBundle') }}</a><span class="divider">/</span></li>
-    <li class="active">GoogleAnalyticsDashboard</li>
+    <li class="active">{{ 'breadcrumb.dashboard' | trans  }}</li>
 {% endblock %}
 
 {%block actions %}
 {% endblock %}
 
 {% block content %}
+
+{% if (is_dummy) %}
+<div class="alert alert-warning">
+    {{ 'alert.dummy_configuration' | trans  }}
+</div>
+{% endif %}
+
 <table class="table table-bordered sonata-ba-list">
     <thead>
         <tr><th colspan="6">{{ 'title.today' | trans }}</th></tr>

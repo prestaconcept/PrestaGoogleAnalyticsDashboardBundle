@@ -10,6 +10,7 @@
 
 namespace Presta\GoogleAnalyticsDashboardBundle\Controller\Admin;
 
+use Presta\GoogleAnalyticsDashboardBundle\Model\GoogleAnalyticsManager;
 use Sonata\AdminBundle\Admin\AdminInterface;
 use Presta\GoogleAnalyticsDashboardBundle\Controller\Admin\BaseController as AdminController;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,15 +22,31 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends AdminController
 {
     /**
+     * @return GoogleAnalyticsManager
+     */
+    protected function getManager()
+    {
+        $manager = $this->get('presta_google_analytics_dashboard.manager.google_analytics');
+
+        if ($manager->isDummy()) {
+            return $this->get('presta_google_analytics_dashboard.manager.google_analytics.mock');
+        }
+
+        return $manager;
+    }
+
+    /**
      * @return Response
      */
     public function indexAction()
     {
-        $manager    = $this->get('presta_google_analytics_dashboard.manager.google_analytics');
+        $manager    = $this->getManager();
         $today      = $manager->getToday();
         $yesterday  = $manager->getYesterday();
 
         $viewParams = array(
+            'is_dummy' => $manager->isDummy(),
+
             'today_visit' => $today->getVisits(),
             'today_page_view' => $today->getPageViews(),
             'today_page_per_visit' => $today->getPageViewsPerVisit(),
