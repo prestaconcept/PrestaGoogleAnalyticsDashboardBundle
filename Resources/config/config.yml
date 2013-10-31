@@ -1,0 +1,7 @@
+presta_sonata_navigation:
+    menu:
+        items:
+            google_analytics:
+                children:
+                    dashboard:
+                        route: presta_google_analytics_dashboard

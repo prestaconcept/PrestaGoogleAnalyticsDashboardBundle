@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="PrestaSonataNavigation.en.xliff">
+        <body>
+            <trans-unit id="navigation.google_analytics.label">
+                <source>navigation.google_analytics.label</source>
+                <target>Google Analytics</target>
+            </trans-unit>
+            <trans-unit id="navigation.google_analytics.dashboard.label">
+                <source>navigation.google_analytics.dashboard.label</source>
+                <target>Dashboard</target>
+            </trans-unit>
+            <trans-unit id="navigation.google_analytics.dashboard.description">
+                <source>navigation.google_analytics.dashboard.description</source>
+                <target>Your visits overview</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
