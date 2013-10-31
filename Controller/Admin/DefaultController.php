@@ -34,15 +34,15 @@ class DefaultController extends AdminController
     }
 
     /**
-     * @return Response
+     * @return array
      */
-    public function indexAction()
+    protected function getDashboardViewParams()
     {
         $manager    = $this->getManager();
         $today      = $manager->getToday();
         $yesterday  = $manager->getYesterday();
 
-        $viewParams = array(
+        return array(
             'is_dummy' => $manager->isDummy(),
 
             'today_visit'               => $today->getVisits(),
@@ -59,7 +59,16 @@ class DefaultController extends AdminController
             'yesterday_visit_bounce_rate'   => $yesterday->getVisitBounceRate(),
             'yesterday_new_visit'           => $yesterday->getNewVisits(),
         );
+    }
 
-        return $this->renderResponse('PrestaGoogleAnalyticsDashboardBundle:Admin/Default:index.html.twig', $viewParams);
+    /**
+     * @return Response
+     */
+    public function indexAction()
+    {
+        return $this->renderResponse(
+            'PrestaGoogleAnalyticsDashboardBundle:Admin/Default:index.html.twig',
+            $this->getDashboardViewParams()
+        );
     }
 }
