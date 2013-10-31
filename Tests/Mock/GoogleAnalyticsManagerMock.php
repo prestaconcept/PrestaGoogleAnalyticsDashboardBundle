@@ -31,16 +31,18 @@ class GoogleAnalyticsManagerMock extends GoogleAnalyticsManager
      */
     public function getToday()
     {
-        return new Row(array(
-            'ga:date' =>  '20131031',
-            'ga:pageviews' =>  '334',
-            'ga:pageviewsPerVisit' =>  '2.357142857142857',
-            'ga:visits' =>  '14' ,
-            'ga:newVisits' =>  '10' ,
-            'ga:timeOnSite' =>  '2217.0' ,
-            'ga:avgTimeOnSite' =>  '158.35714285714286' ,
-            'ga:visitBounceRate' =>  '57.14285714285714' ,
-        ));
+        return new Row(
+            array(
+                'ga:date'               =>  '20131031',
+                'ga:pageviews'          =>  '334',
+                'ga:pageviewsPerVisit'  =>  '2.357142857142857',
+                'ga:visits'             =>  '14' ,
+                'ga:newVisits'          =>  '10' ,
+                'ga:timeOnSite'         =>  '2217.0' ,
+                'ga:avgTimeOnSite'      =>  '158.35714285714286' ,
+                'ga:visitBounceRate'    =>  '57.14285714285714' ,
+            )
+        );
     }
 
     /**
@@ -48,16 +50,18 @@ class GoogleAnalyticsManagerMock extends GoogleAnalyticsManager
      */
     public function getYesterday()
     {
-        return new Row(array(
-            'ga:date' =>  '20131030',
-            'ga:pageviews' =>  '112',
-            'ga:pageviewsPerVisit' =>  '7.0',
-            'ga:visits' =>  '16' ,
-            'ga:newVisits' =>  '6' ,
-            'ga:timeOnSite' =>  '10590.0' ,
-            'ga:avgTimeOnSite' =>  '661.875' ,
-            'ga:visitBounceRate' =>  '37.5' ,
-        ));
+        return new Row(
+            array(
+                'ga:date'               =>  '20131030',
+                'ga:pageviews'          =>  '112',
+                'ga:pageviewsPerVisit'  =>  '7.0',
+                'ga:visits'             =>  '16' ,
+                'ga:newVisits'          =>  '6' ,
+                'ga:timeOnSite'         =>  '10590.0' ,
+                'ga:avgTimeOnSite'      =>  '661.875' ,
+                'ga:visitBounceRate'    =>  '37.5' ,
+            )
+        );
     }
 
     /**

@@ -177,8 +177,8 @@ class GoogleAnalyticsManager
     /**
      * Request google analytics
      *
-     * @param  array $parameters
-     * @param  bool  $multipleResults
+     * @param  array       $parameters
+     * @param  bool        $multipleResults
      * @return array|mixed
      */
     protected function doQuery(array $parameters, $multipleResults = false)
@@ -223,7 +223,7 @@ class GoogleAnalyticsManager
 
     /**
      * @param  Response $response
-     * @param  array $cols
+     * @param  array    $cols
      * @return array
      */
     protected function formatResponse(Response $response, array $cols)
