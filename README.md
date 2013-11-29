@@ -2,10 +2,8 @@ PrestaGoogleAnalyticsDashboard
 ==============================
 
 
-**This project moved to [nicolas-bastien/NBGoogleAnalyticsDashboardBundle](https://github.com/nicolas-bastien/NBGoogleAnalyticsDashboardBundle)
+**This project moved to [nicolas-bastien/NBGoogleAnalyticsDashboardBundle](https://github.com/nicolas-bastien/NBGoogleAnalyticsDashboardBundle)**
 
-
-** [WIP] **
 
 
 PrestaGoogleAnalyticsDashboardBundle is a Symfony2 bundle which adds a google analytics dashboard to your Sonata
